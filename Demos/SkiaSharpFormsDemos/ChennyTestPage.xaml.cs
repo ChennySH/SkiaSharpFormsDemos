@@ -50,6 +50,7 @@ namespace SkiaSharpFormsDemos
                             Color = SKColors.LightGoldenrodYellow,
                         };
                     }
+
                     int posNum = 10 * (9 - i) + (9 - j) + 1;
                     if (i % 2 == 1)
                         posNum = 10 * (9 - i) + j + 1;
