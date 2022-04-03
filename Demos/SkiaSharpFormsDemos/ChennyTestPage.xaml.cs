@@ -54,7 +54,7 @@ namespace SkiaSharpFormsDemos
                     int posNum = 10 * (9 - i) + (9 - j) + 1;
                     if (i % 2 == 1)
                         posNum = 10 * (9 - i) + j + 1;
-                    if(posNum == 100)
+                    if (posNum == 100)
                     {
                         fillPaint = new SKPaint
                         {
@@ -63,7 +63,7 @@ namespace SkiaSharpFormsDemos
                         };
                     }
                     canvas.DrawPath(path, fillPaint);
-                    
+
                     string text = posNum.ToString();
                     float textX = j * 0.1f * info.Width;
                     float textY = (0.1f + i * 0.1f) * info.Height;
@@ -73,10 +73,24 @@ namespace SkiaSharpFormsDemos
                         Color = SKColors.Black,
                     };
                     canvas.DrawText(text, textX, textY, textPaint);
+
                 }
             }
             #endregion
-            
+            float startX = 0.05f * info.Width;
+            float startY = 0.05f * info.Height;
+            float endX = 0.95f * info.Width;
+            float endY = 0.55f * info.Height;
+            SKPoint startPoint = new SKPoint
+            {
+                X = startX,
+                Y = startY,
+            };
+            SKPoint endPoint = new SKPoint
+            {
+                X = endX,
+                Y = endY,
+            };
         }
     }
 }
