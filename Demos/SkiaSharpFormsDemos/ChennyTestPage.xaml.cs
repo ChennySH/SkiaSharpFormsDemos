@@ -102,7 +102,19 @@ namespace SkiaSharpFormsDemos
                 StrokeCap = SKStrokeCap.Round,
             };
             SKPointMode pointMode = SKPointMode.Lines;
-            canvas.DrawPoints(pointMode, ladder, paint); 
+            canvas.DrawPoints(pointMode, ladder, paint);
+            GetLadder(startPoint, endPoint, info.Width, info.Height);
+        }
+        private void GetLadder(SKPoint startPoint, SKPoint endPoint, int width, int height)
+        {
+            int startX = ((int)startPoint.X);
+            int startY = ((int)startPoint.Y);
+            int endX = ((int)endPoint.X);
+            int endY = ((int)endPoint.Y);
+            double tg = ((double)(startY - endY)) / (endX - startX);
+            double radtg = Math.PI * tg;
+            double angle = Math.Atan(radtg);
+            int y = 0;
         }
     }
 }
