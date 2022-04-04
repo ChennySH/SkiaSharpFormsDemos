@@ -78,7 +78,7 @@ namespace SkiaSharpFormsDemos
             }
             #endregion
             float startX = 0.05f * info.Width;
-            float startY = 0.05f * info.Height;
+            float startY = 0.95f * info.Height;
             float endX = 0.95f * info.Width;
             float endY = 0.55f * info.Height;
             SKPoint startPoint = new SKPoint
@@ -91,6 +91,18 @@ namespace SkiaSharpFormsDemos
                 X = endX,
                 Y = endY,
             };
+            SKPoint[] ladder = new SKPoint[2];
+            ladder[0] = startPoint;
+            ladder[1] = endPoint;
+            SKPaint paint = new SKPaint
+            {
+                //Style = SKPaintStyle.Stroke,
+                Color = SKColors.Blue,
+                StrokeWidth = 10,
+                StrokeCap = SKStrokeCap.Round,
+            };
+            SKPointMode pointMode = SKPointMode.Lines;
+            canvas.DrawPoints(pointMode, ladder, paint);
         }
     }
 }
