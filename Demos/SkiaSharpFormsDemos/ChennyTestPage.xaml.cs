@@ -102,7 +102,7 @@ namespace SkiaSharpFormsDemos
                 StrokeCap = SKStrokeCap.Round,
             };
             SKPointMode pointMode = SKPointMode.Lines;
-            canvas.DrawPoints(pointMode, ladder, paint);
+            canvas.DrawPoints(pointMode, ladder, paint); 
         }
     }
 }
